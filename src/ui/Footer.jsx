@@ -36,7 +36,7 @@ export const Footer = () => {
     },
     {
       icon: <AiFillInstagram />,
-      url: "",
+      url: "https://instagram.com/mainoneenergyandengineering",
     },
     {
       icon: <FaTiktok />,
@@ -103,7 +103,8 @@ export const Footer = () => {
               {socials.map((page, index) => (
                 <a
                   key={index}
-                  href={page.index}
+                  href={page.url}
+                  target="_blank"
                   className="px-3 py-3 hover:text-green-400 text-2xl lg:text-3xl hover:shadow-xl shadow-md cursor-pointer transition"
                 >
                   {page.icon}

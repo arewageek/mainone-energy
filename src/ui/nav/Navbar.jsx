@@ -41,7 +41,7 @@ export const Navbar = () => {
       path: "/contact",
     },
     {
-      name: "Gallery",
+      name: "Projects",
       path: "/gallery",
     },
   ];
