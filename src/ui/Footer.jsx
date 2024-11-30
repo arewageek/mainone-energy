@@ -25,7 +25,7 @@ export const Footer = () => {
     {
       icon: <FaLocationArrow />,
       label: "Office Address",
-      content: "Opposite Jabi Garage, Jabi, Abuja",
+      content: "Goshen Plaza, Opposite Jabi Garage, Jabi, Abuja",
     },
   ];
 
@@ -36,7 +36,7 @@ export const Footer = () => {
     },
     {
       icon: <AiFillInstagram />,
-      url: "",
+      url: "https://instagram.com/mainoneenergyandengineering",
     },
     {
       icon: <FaTiktok />,
@@ -67,8 +67,10 @@ export const Footer = () => {
     <div className="w-full py-10 px-10 bg-gray-800 shadow-inner rounded-t-2xl text-gray-50">
       <div className="w-full md:w-[80%] px-4 mx-auto">
         <div className="my-5 flex flex-col md:flex-row space-y-5 md:space-y-0 lg:justify-around  lg:items-center font-exo2">
-          <div className="w-full md:w-1/4 lg:px-3 py-2">
-            <div className="text-3xl font-bold">MainOne Logo</div>
+          <div className="w-full md:w-1/6 lg:px-3 py-2">
+            <div className="text-3xl font-bold">
+              <img src="assets/images/mainone-logo-2.png" className="h-20" />
+            </div>
           </div>
 
           {contactOptions.map((option, index) => (
@@ -84,7 +86,7 @@ export const Footer = () => {
 
               <div className="flex flex-col">
                 <p className="text-green-200">{option.label}</p>
-                <h3 className="font-bold text-xl">{option.content}</h3>
+                <h3 className="font-medium text-lg">{option.content}</h3>
               </div>
             </div>
           ))}
@@ -101,7 +103,8 @@ export const Footer = () => {
               {socials.map((page, index) => (
                 <a
                   key={index}
-                  href={page.index}
+                  href={page.url}
+                  target="_blank"
                   className="px-3 py-3 hover:text-green-400 text-2xl lg:text-3xl hover:shadow-xl shadow-md cursor-pointer transition"
                 >
                   {page.icon}
