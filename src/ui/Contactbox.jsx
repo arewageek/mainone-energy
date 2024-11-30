@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaLocationArrow,
   FaPhoneAlt,
+  FaTiktok,
   FaTwitter,
 } from "react-icons/fa";
 
@@ -13,13 +14,13 @@ export const Contactbox = () => {
     {
       icon: <FaPhoneAlt />,
       title: "Support Call line",
-      link: "tel:2348036152300",
-      label: "+234 803 615 2300",
+      link: "tel:07073614460",
+      label: "07073614460",
     },
     {
       icon: <FaLocationArrow />,
       title: "Location",
-      label: "Opposite Jabi Garage, Jabi, FCT Abuja",
+      label: "Opposite Jabi Garage, Jabi, Abuja",
     },
     {
       icon: <FaClock />,
@@ -31,7 +32,7 @@ export const Contactbox = () => {
   const socials = [
     {
       label: "facebook",
-      link: "",
+      link: "https://web.facebook.com/people/Mainone-Energy-Engineering-Ltd/61558927152840/",
       icon: <FaFacebookF />,
     },
     {
@@ -43,6 +44,12 @@ export const Contactbox = () => {
       label: "instagram",
       link: "",
       icon: <FaInstagram />,
+    },
+
+    {
+      label: "tiktok",
+      link: "",
+      icon: <FaTiktok />,
     },
   ];
 
@@ -137,7 +144,7 @@ export const Contactbox = () => {
             </button>
           </div>
 
-          <div className="w-full flex flex-col px-2 mt-5 text-sm font-bold text-gray-50">
+          <div className="w-full flex flex-col px-2 mt-5 text-sm font-medium text-gray-50">
             {contactOptions.map((option) => {
               return (
                 <div
@@ -145,14 +152,16 @@ export const Contactbox = () => {
                   className="flex space-x-3 py-3 items-center"
                 >
                   <span>{option.icon}</span>
-                  <span>
+                  <div className="flex flex-col gap-y-1">
                     {option.title}:{" "}
                     {option.link ? (
-                      <a href={option.label}>{option.label}</a>
+                      <a href={option.label} className="font-semibold">
+                        {option.label}
+                      </a>
                     ) : (
-                      option.label
+                      <span className="font-semibold">{option.label}</span>
                     )}
-                  </span>
+                  </div>
                 </div>
               );
             })}

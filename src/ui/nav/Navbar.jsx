@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaCartArrowDown, FaRocket } from "react-icons/fa";
 
@@ -41,8 +41,8 @@ export const Navbar = () => {
       path: "/contact",
     },
     {
-      name: "FAQs",
-      path: "/#faqs",
+      name: "Gallery",
+      path: "/gallery",
     },
   ];
 
@@ -56,7 +56,9 @@ export const Navbar = () => {
     >
       <div className="w-full flex flex-col lg:flex-row justify-between items-center">
         <div className="flex justify-between items-center w-full">
-          <div className="w-full font-bold text-2xl">MainOne Energy</div>
+          <div className="w-full font-bold text-2xl">
+            <img src="assets/images/mainone-logo-2.png" className="h-20" />
+          </div>
 
           <div
             className="lg:hidden"
@@ -74,9 +76,9 @@ export const Navbar = () => {
           }`}
         >
           <div className="flex flex-col lg:flex-row lg:space-x-4 text-lg mt-10 lg:mt-0 lg:text-md font-[450] lg:items-center">
-            {menu.map((nav) => {
+            {menu.map((nav, index) => {
               return (
-                <>
+                <Fragment key={index}>
                   <div className="lg:hidden my-2 border-b-[1px] border-b-gray-100 pb-3 w-1/2">
                     <a
                       key={nav.path}
@@ -93,7 +95,7 @@ export const Navbar = () => {
                   >
                     <div className="">{nav.name}</div>
                   </a>
-                </>
+                </Fragment>
               );
             })}
           </div>

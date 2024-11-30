@@ -16,20 +16,17 @@ export default function Services() {
     {
       title: "Professional Team",
       desc: "We have the best team on the job ensuring you get nothing short of the best",
-      image:
-        "https://ecoblue.themerex.net/wp-content/uploads/2023/01/post26-copyright-890x664.jpg",
+      image: "assets/images/installations/panel-roof-2",
     },
     {
       title: "Expert Installation",
       desc: "Our team is deeply experienced in the scope of production and installation of solar components",
-      image:
-        "https://ecoblue.themerex.net/wp-content/uploads/2023/01/post27-copyright-890x664.jpg",
+      image: "assets/images/installations/inverter-1",
     },
     {
       title: "Regular Maintenance",
       desc: "We do not just install but also maintain the facility to ensure continuity",
-      image:
-        "https://ecoblue.themerex.net/wp-content/uploads/2023/01/post12-copyright-890x664.jpg",
+      image: "assets/images/installations/panel-roof-3",
     },
     {
       title: "Consultancy",
@@ -104,7 +101,7 @@ export default function Services() {
                   <div className="overflow-hidden w-full">
                     <img
                       src={value.image}
-                      className="w-full group-hover:scale-110 transition duration-300"
+                      className="w-full group-hover:scale-110 transition duration-300 h-[300pt] object-cover"
                     />
                   </div>
                   <div className="w-full text-2xl font-bold cursor-pointer transition duration-500 flex my-3 -translate-x-10 group-hover:translate-x-0">
@@ -187,8 +184,11 @@ export default function Services() {
             </div>
 
             <div className="flex w-full mt-10 flex-col lg:flex-row flex-wrap border-collapse space-x-0">
-              {services.map((service) => (
-                <div className="group w-full lg:w-1/3 border-[1.4px] border-gray-400 px-5 lg:px-10 py-10 before:bg-gray-700 before:w-full before:h-full relative before:absolute before:left-0 before:top-0 before:z-0 before:translate-x-[-100%] overflow-hidden hover:before:translate-x-[0%] before:transition before:duration-300">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="group w-full lg:w-1/3 border-[1.4px] border-gray-400 px-5 lg:px-10 py-10 before:bg-gray-700 before:w-full before:h-full relative before:absolute before:left-0 before:top-0 before:z-0 before:translate-x-[-100%] overflow-hidden hover:before:translate-x-[0%] before:transition before:duration-300"
+                >
                   <div className="z-3 relative">
                     <div className="text-6xl group-hover:text-white duration-500 transition">
                       {service.icon}

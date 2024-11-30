@@ -7,38 +7,43 @@ import {
   AiOutlineMail,
   AiTwotonePhone,
 } from "react-icons/ai";
-import { FaLocationArrow } from "react-icons/fa";
+import { CgTwitter } from "react-icons/cg";
+import { FaLocationArrow, FaTiktok, FaTwitter } from "react-icons/fa";
 
 export const Footer = () => {
   const contactOptions = [
     {
       icon: <AiFillPhone />,
       label: "Phone Number",
-      content: "(+234) 803-615-2300",
+      content: "0707 361 4460",
     },
     {
       icon: <AiOutlineMail />,
       label: "Send Us An Email",
-      content: "hello@mainoneenergy.com",
+      content: "mainoneenergy2024@gmail.com",
     },
     {
       icon: <FaLocationArrow />,
       label: "Office Address",
-      content: "Opp Jabi Garage, FCT",
+      content: "Opposite Jabi Garage, Jabi, Abuja",
     },
   ];
 
   const socials = [
     {
       icon: <AiFillFacebook />,
-      url: "",
+      url: "https://web.facebook.com/people/Mainone-Energy-Engineering-Ltd/61558927152840/",
     },
     {
       icon: <AiFillInstagram />,
       url: "",
     },
     {
-      icon: <AiFillLinkedin />,
+      icon: <FaTiktok />,
+      url: "",
+    },
+    {
+      icon: <FaTwitter />,
       url: "",
     },
   ];
@@ -135,7 +140,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="w-full md:w-1/4 px-3 py-2">
+          {/* <div className="w-full md:w-1/4 px-3 py-2">
             <h2 className="font-bold text-2xl">Photo Gallery</h2>
             <div className="flex flex-col my-4">
               <div className="flex">
@@ -166,7 +171,7 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

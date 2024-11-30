@@ -5,9 +5,9 @@ import { Header } from "@/ui/Header";
 import { MeetMainone } from "@/ui/MeetMainone";
 import { MoreOnMainone } from "@/ui/MoreOnMainone";
 import { RequestQuote } from "@/ui/RequestQuote";
-import { ServicesSlider } from "@/ui/ServicesSlider";
-import { CounterUp } from "@/ui/CounterUp";
-import Image from "next/image";
+// import { ServicesSlider } from "@/ui/ServicesSlider";
+// import { CounterUp } from "@/ui/CounterUp";
+// import Image from "next/image";
 
 export default function Home() {
   return (
